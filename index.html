@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Importaciones Rincones</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+
+</head>
+
+<style>
+
+
+*{
+
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+
+}
+
+body{
+
+background-color: #ffffff;
+height: 100%;
+background-size: cover;
+background-repeat: no-repeat;
+padding: 0%;
+@media screen and (min-width: 640px) {
+   
+}
+}
+ 
+li,p{
+
+    font-size: 18px;
+    color: #ffffff;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 3%;
+    text-shadow: 0 0 10px rgba(248, 244, 244, 0.616);
+
+}
+
+h2{
+
+color: #e3e6e6;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 20px;
+margin-top: 10px;
+margin-left: 3%;
+text-shadow: 0 0 10px rgba(255, 255, 255, 0.568);
+}
+
+h3{
+
+color: #d1e4e7;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 17px;
+margin: 5px;
+
+}
+
+.service-title {
+    color: #0a0a0a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    margin: 5px;
+    text-shadow: 0 0 10px rgba(1, 1, 1, 0.8);
+}
+
+.container1{
+
+background: linear-gradient(90deg, #0e30d8,
+#050e52, #000000) ;
+width: 100%;
+display: flex;
+justify-content: center;
+box-shadow: 0 0 20px #000000;
+height:max-content;
+
+
+}
+
+
+#comentarios_titulo{
+
+    margin-top: 40px;
+    color: rgb(247, 247, 247);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.726);
+
+
+}
+
+h1{
+
+    text-shadow: 0 0 10px rgba(1, 1, 1, 0.8);
+    text-transform: uppercase; 
+    margin-top: 3.6rem;
+    color: rgb(255, 243, 243);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: -40px;
+    font-size: 1.3rem;
+
+
+}
+
+#subtitulo{
+
+font-size: 0.8rem;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+margin-top: 10px;
+margin-left: -1px;
+color: rgb(190, 201, 201);
+
+}
+
+.comentarios{
+
+background-color: aliceblue;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 13px;
+flex-direction: column;
+border-radius: 5%;
+margin: 10px;
+width: 150px;
+text-align: center;
+box-shadow: 0 0 7px black;
+}
+
+.sec_comentarios{
+
+display: flex;
+width: 100%;
+justify-content: center;
+justify-content: space-evenly;
+flex-direction:row ;
+
+
+}
+
+a{
+
+color: rgb(4, 8, 222);
+
+
+}
+
+
+
+.services {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            color: #000000;
+            text-align: center;
+            
+        }
+        .service {
+           
+        background-color: aliceblue;
+        border-radius: 10px;
+            padding: 28px;
+            width: 10rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            margin-top: 20px;
+            text-align: center;
+            align-items: center;
+            overflow: auto;
+           justify-content: center;
+            box-shadow: 0 0 10px rgb(238, 238, 238);
+
+        }
+        .service:hover {
+            transform: scale(1.05);
+        }
+
+        .servicep{
+
+        color: #000000;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 13px;
+        margin-top: 10px;
+        box-shadow: 0 0 10 #000000;
+
+
+        }
+
+   .seccion-comentarios{
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    overflow: auto;
+    padding: 3rem;
+    box-shadow: 0 0 7px black;
+
+   }
+
+
+
+#whatsapp{
+
+font-size: 20px;
+background-color: rgb(34, 206, 34);
+padding: 5px;
+border-radius: 10px;
+border-color: antiquewhite;
+border-style: double;
+transition: 1s linear;
+margin: 20px;
+box-shadow: 0 0 16px rgb(1, 145, 25);
+}
+
+#whatsapp:hover{
+
+height: max-content;
+width: max-content;
+background-color: rgb(43, 255, 0);
+transform: scale(1.1);
+}
+
+
+#instagram{
+
+font-size: 20px;
+background: linear-gradient(45deg,orange, rgb(235, 33, 67), rgb(204, 7, 204), rgb(11, 36, 255)  );
+padding: 5px;
+border-radius: 10px;
+border-color: antiquewhite;
+border-style: double;
+transition: 1s linear;
+margin: 20px;
+box-shadow: 0 0 16px rgb(131, 4, 125);
+}
+
+#instagram:hover{
+
+height: max-content;
+width: max-content;
+transform: scale(1.1);
+
+}
+
+
+#facebook{
+
+font-size: 20px;
+background-color: #045cff;
+padding: 5px;
+border-radius: 10px;
+border-color: antiquewhite;
+border-style: double;
+transition: 2s ;
+margin: 10px;
+box-shadow: 0 0 16px rgb(11, 3, 255);
+}
+
+#facebook:hover{
+
+height: max-content;
+width: max-content;
+background-color: rgb(9, 183, 252);
+transform: scale(1.1);
+}
+
+#gmail{
+
+font-size: 20px;
+background-color: #d2dff7;
+padding: 15px;
+border-radius: 10px;
+border-color: rgb(244, 7, 7);
+border-style: double;
+transition: 2s ;
+margin: 10px;
+box-shadow: 0 0 16px rgb(252, 30, 1);
+
+
+}
+
+#gmail:hover{
+
+height: max-content;
+background-color: rgb(255, 255, 255);
+transform: scale(1.1);
+}
+
+
+
+#iconos{
+
+    height: 30px;
+    width: 30px;
+    padding-right: 5px;
+    margin-top: 5px;
+    
+}
+
+#perfiles{
+
+height: 80px;
+width: 80px;
+border-radius: 50%;
+box-shadow: 0 0 20px #000000;
+margin-bottom: -10%;
+
+}
+
+#nombre{
+
+    color: #000000;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#comentario{
+
+    color: #000000;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#enlaces_pasos{
+
+color: rgb(0, 238, 255);
+text-decoration: underline;
+
+}
+
+footer{
+
+background: linear-gradient(90deg, #002aff,
+#050e52, #000000) ;
+padding: 20px;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+width: 100%;
+
+
+
+
+}
+
+.logo-footer{
+
+     width: 200px;
+     justify-content: center;
+     
+}
+
+#parrafo-footer{
+
+color: #ffffff;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+}
+
+.enlace-footer{
+color: #00bfff;
+}
+
+.enlaces-botones{
+
+color: #000000;
+text-decoration: none;
+
+}
+
+#logo{
+
+width: 220px;
+height:180px;
+border-radius: 10rem;
+position: relative;
+margin-left: 1%;
+margin-right: 2%;
+
+
+}
+
+.lista{
+
+margin-left: 3%;
+margin-bottom: 80px;
+
+}
+
+.botones{
+
+justify-content: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 1rem;
+margin-bottom: 20px;
+
+
+}
+
+.iconos{
+
+height: 1.7rem;
+display: inline;
+
+
+}
+
+.redes-sociales{
+
+background-color: white;
+box-shadow: 0 0 20px #fdfcfc;
+border-radius: 20px;
+flex-direction: column;
+padding: 1rem;
+margin: 4%;
+
+}
+
+#botones_iconos{
+
+background-color: transparent;
+border: none;
+transition: .8s;
+}
+
+#botones_iconos:hover{
+
+background-color: skyblue;
+
+}
+
+#parrafos_nav{
+    font-size: 15px;
+    display: inline;
+    margin-left: 1%;
+    color: black;
+    text-shadow: 0 0 10px #001316d3;
+}
+
+
+.iconos_texto{
+
+font-size: 13px;
+display: inline;
+margin-left: 1%;
+}
+
+
+nav{
+    background:linear-gradient(40deg, #5f9aca, #03d1f5 );
+    box-shadow: 0 0 10px #48bfee;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    justify-content: space-evenly;
+    
+}
+
+
+.todo-el-contenido{
+
+    margin: 0 5%;
+    padding: 1rem;
+    box-shadow: 0 0 20px #000000;
+    background-color: #121212e3;
+    backdrop-filter: blur(10px);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #e3e6e6;
+
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+
+<body>
+    
+<header>
+
+    <div class="container1">
+
+        <img id="logo" src="logo.png" alt="">
+<h1 id=""> Importaciones E&Y <br>
+<p id="subtitulo">Te ayudamos con tu importacion</p>
+
+
+</div>
+
+<nav>
+
+    <button id="botones_iconos" onclick="location.href='index.html'">
+<img class="iconos" src="https://cdn-icons-png.flaticon.com/128/3917/3917033.png" alt="">
+
+<p id="parrafos_nav" class="iconos_texto">Inicio</p>
+</button>
+
+
+
+    <button id="botones_iconos" onclick="location.href='index2.html'">
+<img class="iconos" src="https://cdn-icons-png.flaticon.com/128/7857/7857576.png" alt="">
+<br>
+<p id="parrafos_nav" class="iconos_texto">Productos de interes</p>
+</button>
+
+
+
+    <button id="botones_iconos" onclick="location.href='index3.html'">
+        <img class="iconos" src="https://cdn-icons-png.flaticon.com/128/14644/14644405.png" alt="">
+<br>
+        <p id="parrafos_nav" class="iconos_texto">Metodos de pago</p>
+</button>
+
+
+    <button id="botones_iconos" onclick="location.href='index4.html'">
+<img class="iconos" src="https://cdn-icons-png.flaticon.com/128/18625/18625356.png" alt="">
+<p id="parrafos_nav" class="iconos_texto">Sugerencias</p>
+</button>
+
+
+
+
+</nav>
+
+
+</header>
+
+
+<br><br><br>
+
+<div class="todo-el-contenido">
+
+<p>Bienvenido a Importaciones E&Y , tu puerta de entrada al mundo de las importaciones. Nos especializamos en facilitar el acceso a productos de alta calidad directamente desde Alibaba, el gigante del comercio electrónico. Nuestro objetivo es simplificar el proceso de importación, brindándote un servicio confiable y eficiente que se adapta a tus necesidades comerciales.
+
+En Importaciones E&Y, entendemos que cada negocio es único. Por eso, ofrecemos un enfoque personalizado, acompañándote en cada paso del camino, desde la selección de productos hasta la entrega final. Ya sea que busques productos electrónicos, moda, artículos para el hogar o cualquier otra categoría, nuestra plataforma te conecta con proveedores verificados y te asegura las mejores condiciones de compra.
+
+Descubre cómo podemos ayudarte a expandir tu negocio y optimizar tus importaciones. ¡Comienza hoy mismo y transforma tus ideas en realidad!</p>
+
+
+
+<br><br><br>
+
+<h2 style="text-align: center;">Nuestros servicios</h2>
+
+
+<section>
+<div class="services">
+                <div class="service">
+                    <h3 class="service-title">Importación de Productos</h3>
+                    <p class="servicep">Nos especializamos en la importación de productos de diversas categorías.</p>
+                </div>
+                <div class="service">
+                    <h3 class="service-title">Logística y Transporte</h3>
+                    <p class="servicep">Ofrecemos soluciones logísticas para asegurar la entrega eficiente de productos.</p>
+                </div>
+                <div class="service">
+                    <h3 class="service-title">Asesoría en Comercio Exterior</h3>
+                    <p class="servicep" >Brindamos asesoría profesional en todos los aspectos del comercio internacional.</p>
+                </div>
+            </div>
+
+</section>
+
+
+<br><br><br>
+
+<h2 style="margin-bottom: 30px;" 
+> Pasos a seguir para realizar tu importacion con nosotros:</h2><br>
+
+<div class="lista">
+<ul>
+
+<li> Haga click en el siguiente enlace que conduce a la pagina principal de Alibaba <a style="color: rgb(13, 213, 248);"  id="enlace_pasos" href="https://www.alibaba.com/premium/chinese_products.html?src=sem_ggl&field=UG&from=sem_ggl&cmpgn=20794787644&adgrp=154466838143&fditm=&tgt=kwd-22669921&locintrst=&locphyscl=1028570&mtchtyp=b&ntwrk=g&device=c&dvcmdl=&creative=681547019988&plcmnt=&plcmntcat=&aceid=&position=&gad_source=1&gad_campaignid=20794787644&gbraid=0AAAAAD8m77okGlMBbyZIMwwKt88tW6PpI&gclid=CjwKCAjw49vEBhAVEiwADnMbbCK5Gumj-KugKNcIctTSA8Dq5GAs4KgsVpjAr8qwSc5lTAPXrxHTgxoCjK0QAvD_BwE">
+    Alibaba.com  
+</a>  y busque el producto que desea importar.
+</li> <br>
+
+<li> Copie el enlace del producto en cuestion. </li>
+<br>
+
+<li>Envienos el enlace a alguna de nuestras redes sociales ubicadas en la parte de abajo. </li>
+<br>
+</ul>
+
+</div>
+
+<div class="redes-sociales">
+<h2 style="text-align: center; margin: 30px;
+color: #000000;"> Redes sociales:</h2>
+
+<div class="botones">
+<button id="facebook"><a  style="color: white;" class="enlaces-botones" href="https://www.facebook.com/yojer.rincones/">
+    <img id="iconos" src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="">
+    Facebook</a></button> 
+
+
+<button id="instagram"><a style="color: white;" class="enlaces-botones"  href="https://www.instagram.com/yojer_rincones57/">
+    <img id="iconos" src="https://cdn-icons-png.flaticon.com/128/725/725339.png" alt="">
+Instagram</a></button>
+
+
+<button id="whatsapp"><a    class="enlaces-botones"  href="https://wa.me/584125238518?text=Hola,%20me%20interesa%20más%20informacion😊." >
+    <img id="iconos" src="https://cdn-icons-png.flaticon.com/128/15707/15707820.png" alt="">
+    Whatssapp</a></button>
+    
+
+<button id="gmail" style="height: 80px;"><a  class="enlaces-botones"  href="mailto:yojerrp17@gmail.com"
+    style="color: #001316;">
+    <img id="iconos" src="https://cdn-icons-png.flaticon.com/128/5968/5968534.png" alt="">
+    Gmail</a></button>
+
+
+    
+</div>
+
+</div>
+   
+
+</div>
+
+
+     <br><br><br><br><br><br>
+    <br><br>
+
+
+  <h1 id="comentarios_titulo"
+  style="text-align: center;"
+  >Comentarios de nuestros clientes</h1>
+
+  <br><br>
+
+
+    
+<div class="sec_comentarios"> 
+
+
+<div class="seccion-comentarios">
+
+<div class="comentarios">
+
+    <img id="perfiles" src="https://i.pinimg.com/736x/03/18/c0/0318c096dd8382a1aadb05196f491d20.jpg" alt=""><br>
+    <p id="nombre">Vero18</p> 
+    <p id="comentario">Excelente servicio!</p>
+
+</div>
+
+
+<div class="comentarios">
+
+    <img id="perfiles" src="https://i.pinimg.com/736x/ff/12/a3/ff12a346c9ae25dc93d02f6a7b6f97e6.jpg" alt=""><br>
+    <p id="nombre">Juan_Medina</p> 
+    <p id="comentario">Confiables!</p>
+
+</div>
+
+<div class="comentarios">
+
+    <img id="perfiles" src="https://i.pinimg.com/736x/b9/70/f0/b970f0ca26d29e48d64751ec860c7a8f.jpg" alt=""><br>
+    <p id="nombre">Rafa_72</p> 
+    <p id="comentario">¡Importacion segura!</p>
+
+</div>
+
+
+<div class="comentarios">
+
+    <img id="perfiles" src="https://i.pinimg.com/736x/e3/3b/ed/e33bed00a26c2fc2ddbc62ff3534e72b.jpg" alt=""><br>
+    <p id="nombre">Evelyn23</p> 
+    <p id="comentario">Atencion Excelente</p>
+
+</div>
+
+
+
+<div class="comentarios">
+
+    <img id="perfiles" src="https://i.pinimg.com/736x/de/7f/82/de7f82e6a588a83be84aca501fb40a90.jpg" alt=""><br>
+    <p id="nombre">Yesika Murillo</p> 
+    <p id="comentario">Maravilloso!</p>
+
+</div>
+
+</div>
+
+
+</div>
+<br><br><br><br><br><br><br><br>
+
+
+<footer>
+    <div class="contact">
+        <h3>Contáctanos</h3>
+        <p id="parrafo-footer"><strong>Teléfono:</strong> +58 412-5238518</p>
+        <p id="parrafo-footer"><strong>Correo Electrónico:</strong>
+             <a class="enlace-footer" href="mailto:yojerrp17@gmail.com">yojerrp17@gmail.com</a></p>
+
+    </div>
+
+    <div class="social-media">
+        <h3>Síguenos en Redes Sociales</h3>
+        <ul>
+            <li id="parrafo-footer"><a class="enlace-footer" href="#">Facebook</a></li>
+            <li id="parrafo-footer"><a class="enlace-footer" href="#">Instagram</a></li>
+            <li id="parrafo-footer"><a class="enlace-footer" href="#">Tik tok</a></li>
+        </ul>
+    </div>
+
+    <div class="useful-info">
+        <h3>Información Útil</h3>
+        <ul>
+            <li id="parrafo-footer"><a class="enlace-footer" href="#">Términos y Condiciones</a></li>
+            <li id="parrafo-footer"><a class="enlace-footer" href="#">Política de Privacidad</a></li>
+
+        </ul>
+    </div>
+
+
+    <div class="footer-bottom">
+        <p id="parrafo-footer">© 2025 <strong>Importaciones E&Y</strong>. Todos los derechos reservados.</p>
+    </div>
+
+<img class="logo-footer" src="logo.png" alt="">
+
+</footer>
+
+
+
+</body>
+</html>

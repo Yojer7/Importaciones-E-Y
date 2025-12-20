@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos de Interés - Importaciones Rincones</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   background-color: #f7f4f4;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0%;
+}
+
+@media screen and (min-width: 640px) {
+    body {
+        background-color: #fdfdfd;
+    }
+}
+
+li,p{
+    font-size: 18px;
+    color: #ffffff;
+    text-shadow: 0 0 10px white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 3%;
+}
+
+h2{
+    color: #ebf0f0;
+    text-shadow: 0 0 10px white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 3%;
+}
+
+h3{
+    color: #d1e4e7;
+    text-shadow: 0 0 10px white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    margin: 5px;
+}
+
+.container1{
+    background: linear-gradient(90deg, #002aff, #050e52, #000000);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 20px #000000;
+    height:max-content;
+}
+
+h1{
+    text-shadow: 0 0 10px rgba(1, 1, 1, 0.8);
+    text-transform: uppercase; 
+    margin-top: 3.6rem;
+    color: rgb(255, 243, 243);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: -40px;
+    font-size: 1.3rem;
+}
+
+#subtitulo{
+    font-size: 0.8rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 10px;
+    margin-left: -1px;
+    color: rgb(190, 201, 201);
+}
+
+a{
+    color: rgb(4, 8, 222);
+}
+
+#logo{
+    width: 220px;
+    height:180px;
+    border-radius: 10rem;
+    position: relative;
+    margin-left: 1%;
+    margin-right: 2%;
+}
+
+.iconos{
+    height: 1.8rem;
+    display: inline;
+}
+
+.iconos_texto{
+    font-size: 15px;
+    display: inline;
+    margin-left: 1%;
+    color: #000000;
+    text-shadow: 0 0 10px #ebf0f0;
+}
+
+#botones_iconos{
+    background-color: transparent;
+    border: none;
+    transition: .8s;
+}
+
+#botones_iconos:hover{
+
+background-color: skyblue;
+
+}
+
+
+nav{
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    justify-content: space-evenly;
+    background: linear-gradient(to right, #008cff, #0cb8d7 );
+}
+
+/* Estilos simplificados para productos */
+.productos-container {
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.titulo-principal {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+
+}
+
+.producto-card {
+    background-color: aliceblue;
+    box-shadow: 0 0 10px white;
+    border-radius: 8px;
+    padding: 12px;
+    transition: transform 0.3s;
+    text-decoration: none;
+   
+}
+
+.producto-card:hover {
+    transform: scale(1.03);
+}
+
+.producto-imagen {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.producto-titulo {
+    font-size: 14px;
+    font-weight: bold;
+    color: #003332;
+    margin-bottom: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.producto-precio {
+    font-weight: bold;
+    color: #002aff;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.boton-alibaba {
+    display: block;
+    width: 16rem;
+    margin: 20px auto;
+    padding: 10px;
+    background: linear-gradient(to right, #008cff, #0cb8d7);
+    color: white;
+    text-shadow: 0 0 6px blue;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 7px 0 rgb(2, 88, 158);
+    border: solid 1px rgba(255, 255, 255, 0.616);
+    font-weight: bold;
+    transition: 0.3s all;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.boton-alibaba:hover{
+
+     transform: translateY(7px);
+    box-shadow: 0 1px 0 rgb(0, 140, 255);
+    transition: 0.3s all;
+}
+
+/* Estilos del footer */
+
+footer{
+
+background: linear-gradient(90deg, #002aff,
+#050e52, #000000) ;
+padding: 20px;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+
+
+
+
+}
+
+.logo-footer{
+
+     width: 200px;
+     justify-content: center;
+     
+}
+
+#parrafo-footer{
+
+color: #ffffff;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+}
+
+.enlace-footer{
+color: #00bfff;
+}
+
+.enlaces-botones{
+
+color: #000000;
+text-decoration: none;
+
+}
+
+#boton-activo {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .container1 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    h1 {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
+
+.todo-el-contenido{
+
+    margin: 0 5%;
+    padding: 1rem;
+    box-shadow: 0 0 20px #000000;
+    background-color: #121212;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #e3e6e6;
+margin-top: 3rem;
+margin-bottom: 3rem;
+}
+
+
+
+
+
+
+
+</style>
+
+<body>
+    
+<header>
+    <div class="container1">
+        <img id="logo" src="logo.png" alt="">
+        <h1> Importaciones Rincones <br> 
+        <p id="subtitulo">Te ayudamos con tu importacion</p>
+    </div>
+
+    <nav>
+        <button id="botones_iconos" onclick="location.href='index.html'">
+            <img class="iconos" src="https://cdn-icons-png.flaticon.com/128/3917/3917033.png" alt="">
+            <p class="iconos_texto">Inicio</p>
+        </button>
+
+        <button id="botones_iconos" id="boton-activo" onclick="location.href='index2.html'">
+            <img class="iconos" src="https://cdn-icons-png.flaticon.com/128/7857/7857576.png" alt="">
+            <br>
+            <p class="iconos_texto">Productos de interes</p>
+        </button>
+
+        <button id="botones_iconos" onclick="location.href='index3.html'">
+            <img class="iconos" src="https://cdn-icons-png.flaticon.com/128/14644/14644405.png" alt="">
+            <br>
+            <p class="iconos_texto">Metodos de pago</p>
+        </button>
+
+        <button id="botones_iconos" onclick="location.href='index4.html'">
+            <img class="iconos" src="https://cdn-icons-png.flaticon.com/128/18625/18625356.png" alt="">
+            <p class="iconos_texto">Sugerencias</p>
+        </button>
+    </nav>
+</header>
+
+<div class="todo-el-contenido">
+
+<div class="productos-container">
+    <h2 class="titulo-principal">Productos Populares de Alibaba</h2>
+    
+    <div class="productos-grid">
+        <a href="https://www.alibaba.com/showroom/bluetooth-headphones.html" class="producto-card">
+            <img class="producto-imagen" src="https://s.alicdn.com/@sc04/kf/H6d632ec7ea3045dfb5196a6348d3bb47i.jpg?avif=close&webp=close" alt="Auriculares Bluetooth">
+            <h4 class="producto-titulo">Auriculares Bluetooth</h4>
+            <p class="producto-precio">$2.50 - $28.00</p>
+        </a>
+        
+        <a href="https://www.alibaba.com/trade/search?spm=a2700.details.pageModule_fy23_pc_search_bar.historyItem_pos_0&tab=all&SearchText=smarwatch+reloj+deportivo&has4Tab=true" class="producto-card">
+            <img class="producto-imagen" src="https://s.alicdn.com/@sc04/kf/He913d047a4d242a5bc806071b9dfbab1s.jpg?avif=close&webp=close" alt="Smartwatch">
+            <h4 class="producto-titulo">Smartwatch Deportivo</h4>
+            <p class="producto-precio">$9.00 - $25.00</p>
+        </a>
+        
+        <a href="https://www.alibaba.com/showroom/power-bank.html" class="producto-card">
+            <img class="producto-imagen" src="https://s.alicdn.com/@sc04/kf/H59f76343e4ea478d8f2de52a0e497f737.jpg?avif=close&webp=close" alt="Power Bank">
+            <h4 class="producto-titulo">Power Bank 10000mAh</h4>
+            <p class="producto-precio">$5.00 - $16.00</p>
+        </a>
+        
+        <a href="https://www.alibaba.com/showroom/robot-vacuum.html" class="producto-card">
+            <img class="producto-imagen" src="https://s.alicdn.com/@sc04/kf/HTB1hghDXoY1gK0jSZFCq6AwqXXa3.jpg?avif=close&webp=close" alt="Robot Aspirador">
+            <h4 class="producto-titulo">Robot Aspirador</h4>
+            <p class="producto-precio">$85.00 - $180.00</p>
+        </a>
+        
+        <a href="https://www.alibaba.com/showroom/sunglasses.html" class="producto-card">
+            <img class="producto-imagen" src="https://s.alicdn.com/@sc04/kf/H7a79a2c9932043999256eaaf649b68baS.jpg?avif=close&webp=close" alt="Gafas de Sol">
+            <h4 class="producto-titulo">Gafas de Sol</h4>
+            <p class="producto-precio">$5.00 - $12.00</p>
+        </a>
+        
+        <a href="https://www.alibaba.com/showroom/backpack.html" class="producto-card">
+            <img class="producto-imagen" src="https://s.alicdn.com/@sc04/kf/Hcf8876f0252c42788b4644ce2f523a57E.jpg_720x720q50.jpg" alt="Mochila">
+            <h4 class="producto-titulo">Mochila con USB</h4>
+            <p class="producto-precio">$18.00 - $30.00</p>
+        </a>
+        
+        <a href="https://www.alibaba.com/showroom/led-strip-lights.html" class="producto-card">
+            <img class="producto-imagen" src="https://s.alicdn.com/@sc04/kf/H2bca8a7d1d6042be9e714a451991155cJ.jpg_720x720q50.jpg" alt="Luces LED">
+            <h4 class="producto-titulo">Luces LED</h4>
+            <p class="producto-precio">$8.00 - $15.00</p>
+        </a>
+        
+        <a href="https://www.alibaba.com/showroom/folding-bicycle.html" class="producto-card">
+            <img class="producto-imagen" src="https://s.alicdn.com/@sc04/kf/H74a15e761ffc40b4a110b76c58689359R.jpg?avif=close&webp=close" alt="Bicicleta Plegable">
+            <h4 class="producto-titulo">Bicicleta Plegable</h4>
+            <p class="producto-precio">$85.00 - $150.00</p>
+        </a>
+
+        <a href="https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.header.82.2ce21061bTED44&SearchText=Zapatos+de+hombre&indexArea=product_en&search_cource_scene=pc_home_product_category&has4Tab=true&tab=all" class="producto-card">
+            <img class="producto-imagen" src="https://s.alicdn.com/@sc04/kf/H05830f8be4d445ad8734413f95ed1ce0v.jpg?avif=close&webp=close" alt="Zapatos para hombre">
+            <h4 class="producto-titulo">Zapatos para hombre</h4>
+            <p class="producto-precio">$5.00 - $55.00</p>
+        </a>
+
+         <a href="https://www.alibaba.com/trade/search?spm=a2700.galleryofferlist.the-new-header_fy23_pc_search_bar.keydown__Enter&tab=all&SearchText=celulares&has4Tab=true" class="producto-card">
+            <img class="producto-imagen" src="https://s.alicdn.com/@sc04/kf/Hbb46de8c77954d6087ded301f3882b5bu.jpg?avif=close&webp=close" alt="Bicicleta Plegable">
+            <h4 class="producto-titulo">Celulares</h4>
+            <p class="producto-precio">$45.00 - $250.00</p>
+        </a>
+
+
+    </div>
+    
+    <a href="https://www.alibaba.com" class="boton-alibaba">Ver más productos en Alibaba</a>
+</div>
+
+</div>
+
+
+
+
+<footer>
+    <div class="contact">
+        <h3>Contáctanos</h3>
+        <p id="parrafo-footer"><strong>Teléfono:</strong> +58 412-5238518</p>
+        <p id="parrafo-footer"><strong>Correo Electrónico:</strong>
+             <a class="enlace-footer" href="mailto:yojerrp17@gmail.com">yojerrp17@gmail.com</a></p>
+    </div>
+
+    <div class="social-media">
+        <h3>Síguenos en Redes Sociales</h3>
+        <ul>
+            <li id="parrafo-footer"><a class="enlace-footer" href="#">Facebook</a></li>
+            <li id="parrafo-footer"><a class="enlace-footer" href="#">Instagram</a></li>
+            <li id="parrafo-footer"><a class="enlace-footer" href="#">Tik tok</a></li>
+        </ul>
+    </div>
+
+    <div class="useful-info">
+        <h3>Información Útil</h3>
+        <ul>
+            <li id="parrafo-footer"><a class="enlace-footer" href="#">Términos y Condiciones</a></li>
+            <li id="parrafo-footer"><a class="enlace-footer" href="#">Política de Privacidad</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-bottom">
+        <p id="parrafo-footer">© 2025 <strong>Importaciones E&Y</strong>. Todos los derechos reservados.</p>
+    </div>
+
+    <img class="logo-footer" src="logo.png" alt="">
+</footer>
+
+
+</body>
+</html>

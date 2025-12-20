@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos de Pago - Importaciones Rincones</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   background-color: #ffffff;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0%;
+}
+
+@media screen and (min-width: 640px) {
+    body {
+        background-color: #ffffff;
+    }
+}
+
+li,p{
+    font-size: 13px;
+    color: #f9fcfb;
+    text-shadow: 0 0 10px #ebf0f0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 3%;
+}
+
+h2{
+    color: #ffffff;
+    text-shadow: 0 0 10px #ebf0f0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 3%;
+}
+
+h3{
+    color: #d1e4e7;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    margin: 5px;
+}
+
+.container1{
+    background: linear-gradient(90deg, #002aff, #050e52, #000000);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 20px #000000;
+    height:max-content;
+}
+
+h1{
+    text-shadow: 0 0 10px rgba(1, 1, 1, 0.8);
+    text-transform: uppercase; 
+    margin-top: 3.6rem;
+    color: rgb(255, 243, 243);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: -40px;
+    font-size: 1.3rem;
+}
+
+#subtitulo{
+    font-size: 0.8rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 10px;
+    margin-left: -1px;
+    color: rgb(200, 206, 206);
+}
+
+a{
+    color: rgb(11, 195, 252);
+}
+
+#logo{
+    width: 220px;
+    height:180;
+    border-radius: 10rem;
+    position: relative;
+    margin-left: 1%;
+    margin-right: 2%;
+}
+
+.iconos{
+    height: 1.8rem;
+    display: inline;
+}
+
+.iconos_texto{
+    font-size: 15px;
+    display: inline;
+    margin-left: 1%;
+    color: black;
+}
+
+#botones_iconos{
+    background-color: transparent;
+    border: none;
+    transition: .8s;
+}
+
+#botones_iconos:hover{
+
+background-color: skyblue;
+
+}
+
+
+nav{
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    justify-content: space-evenly;
+    background: linear-gradient(to right, #008cff, #0cb8d7 );
+}
+
+/* Estilos específicos para la página de métodos de pago */
+.metodos-pago-container {
+    width: 90%;
+    border-radius: 15px;
+    margin: 30px auto;
+    box-shadow: 0 0 7px black;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.metodo-pago {
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000000;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.952);
+    transition: transform 0.3s;
+    display: flex;
+    width: max-content;
+    max-width: 80%;
+    overflow: auto;
+    flex-direction: column;
+}
+
+.metodo-pago:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px #000000;
+}
+
+.metodo-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    
+}
+
+.metodo-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.metodo-title {
+    color: #050706;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.metodo-content {
+    margin-left: 65px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.metodo-descripcion {
+    margin-bottom: 15px;
+    line-height: 1.5;
+    font-size: 1rem;
+    color: #181b1b;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.metodo-datos {
+    background-color: #e8f4f8;
+    box-shadow: 0 0 10px #181b1b;
+    padding: 15px;
+    overflow: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dato-item {
+    display: flex;
+    margin-bottom: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+}
+
+
+.dato-label {
+    font-weight: bold;
+    min-width: 120px;
+    color: #003332;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pasos-lista {
+    margin-left: 20px;
+    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pasos-lista li {
+    margin-bottom: 8px;
+    color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilos del footer */
+footer{
+    background: linear-gradient(90deg, #002aff, #050e52, #000000);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.logo-footer{
+     width: 200px;
+     justify-content: center;
+     margin: 0 auto;
+}
+
+#parrafo-footer{
+    color: #ffffff;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.enlace-footer{
+    color: #00bfff;
+}
+
+/* Estilo para el botón activo (Métodos de Pago) */
+#boton-activo {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .metodo-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .metodo-icon {
+        margin-bottom: 10px;
+    }
+    
+    .metodo-content {
+        margin-left: 0;
+    }
+    
+    .dato-item {
+        flex-direction: column;
+    }
+    
+    .dato-label {
+        min-width: auto;
+        margin-bottom: 3px;
+    }
+}
+</style>
+
+<body>
+    
+<header>
+    <div class="container1">
+        <img id="logo" src="logo.png" alt="">
+        <h1> Importaciones Rincones <br> 
+        <p id="subtitulo">Te ayudamos con tu importacion</p>
+    </div>
+
+    <nav>
+        <button id="botones_iconos" onclick="location.href='index.html'">
+            <img class="iconos" src="https://cdn-icons-png.flaticon.com/128/3917/3917033.png" alt="">
+            <p class="iconos_texto">Inicio</p>
+        </button>
+
+        <button id="botones_iconos" onclick="location.href='index2.html'">
+            <img class="iconos" src="https://cdn-icons-png.flaticon.com/128/7857/7857576.png" alt="">
+            <br>
+            <p class="iconos_texto">Productos de interes</p>
+        </button>
+
+        <button id="botones_iconos" id="boton-activo"  onclick="location.href='index3.html'">
+            <img class="iconos" src="https://cdn-icons-png.flaticon.com/128/14644/14644405.png" alt="">
+            <br>
+            <p class="iconos_texto">Metodos de pago</p>
+        </button>
+
+        <button id="botones_iconos" onclick="location.href='index4.html'">
+            <img class="iconos" src="https://cdn-icons-png.flaticon.com/128/18625/18625356.png" alt="">
+            <p class="iconos_texto">Sugerencias</p>
+        </button>
+    </nav>
+</header>
+
+<div class="metodos-pago-container">
+    <h2 style="text-align: center; margin: 20px; color: rgb(255, 255, 255);">Métodos de Pago Disponibles</h2>
+    
+    <!-- Pago Móvil -->
+    <div class="metodo-pago">
+        <div class="metodo-header">
+            <img class="metodo-icon" src="https://cdn-icons-png.flaticon.com/128/16435/16435657.png" alt="Pago Móvil">
+            <h3 class="metodo-title">Pago Móvil</h3>
+        </div>
+        <div class="metodo-content">
+            <p class="metodo-descripcion">
+                Realiza pagos rápidos y seguros desde tu teléfono móvil a través de nuestra cuenta asociada.
+            </p>
+            <div class="metodo-datos">
+                <div class="dato-item">
+                    <span class="dato-label">Banco:</span>
+                    <span class="dato-value">Banco de Venezuela</span>
+                </div>
+                <div class="dato-item">
+                    <span class="dato-label">Cédula:</span>
+                    <span class="dato-value">25.123.456</span>
+                </div>
+                <div class="dato-item">
+                    <span class="dato-label">Teléfono:</span>
+                    <span class="dato-value">0412-123-4567</span>
+                </div>
+            </div>
+            <h4 style="margin-top: 15px;">Pasos para realizar el pago:</h4>
+            <ol class="pasos-lista">
+                <li>Abre la aplicación de tu banco y selecciona la opción Pago Móvil</li>
+                <li>Ingresa nuestra cédula (25.123.456)</li>
+                <li>Ingresa nuestro número de teléfono (0412-123-4567)</li>
+                <li>Indica el monto a pagar</li>
+                <li>Confirma la transacción</li>
+                <li>Envía el comprobante por WhatsApp</li>
+            </ol>
+        </div>
+    </div>
+    
+    <!-- Binance -->
+    <div class="metodo-pago">
+        <div class="metodo-header">
+            <img class="metodo-icon" src="https://cdn-icons-png.flaticon.com/128/6001/6001283.png" alt="Binance">
+            <h3 class="metodo-title">Binance (Criptomonedas)</h3>
+        </div>
+        <div class="metodo-content">
+            <p class="metodo-descripcion">
+                Aceptamos pagos a través de Binance con diversas criptomonedas. Ideal para transacciones internacionales.
+            </p>
+            <div class="metodo-datos">
+                <div class="dato-item">
+                    <span class="dato-label">Monedas aceptadas:</span>
+                    <span class="dato-value">USDT, BUSD, BTC, ETH</span>
+                </div>
+                
+                <div class="dato-item">
+                    <span class="dato-label">ID de Binance:</span>
+                    <span class="dato-value">123456789</span>
+                </div>
+                <div class="dato-item">
+                    <span class="dato-label">Email:</span>
+                    <span class="dato-value">importacionese&y@gmail.com</span>
+                </div>
+            </div>
+            <h4 style="margin-top: 15px;">Pasos para realizar el pago:</h4>
+            <ol class="pasos-lista">
+                <li>Inicia sesión en tu cuenta de Binance</li>
+                <li>Selecciona la opción "Enviar" o "Retirar"</li>
+                <li>Ingresa nuestro ID de Binance o dirección de wallet</li>
+                <li>Selecciona la criptomoneda y el monto a enviar</li>
+                <li>Confirma que todos los datos sean correctos</li>
+                <li>Completa la verificación de seguridad</li>
+                <li>Envía el hash de la transacción por WhatsApp</li>
+            </ol>
+        </div>
+    </div>
+    
+    <!-- PayPal -->
+    <div class="metodo-pago">
+        <div class="metodo-header">
+            <img class="metodo-icon" src="https://cdn-icons-png.flaticon.com/128/888/888871.png" alt="PayPal">
+            <h3 class="metodo-title">PayPal</h3>
+        </div>
+        <div class="metodo-content">
+            <p class="metodo-descripcion">
+                Realiza pagos internacionales de forma segura a través de PayPal. Aceptamos pagos en USD.
+            </p>
+            <div class="metodo-datos">
+                <div class="dato-item">
+                    <span class="dato-label">Email de PayPal:</span>
+                    <span class="dato-value">pagos@importacionesE&Y.com</span>
+                </div>
+                <div class="dato-item">
+                    <span class="dato-label">Moneda:</span>
+                    <span class="dato-value">Dólares estadounidenses (USD)</span>
+                </div>
+                <div class="dato-item">
+                    <span class="dato-label">Tipo:</span>
+                    <span class="dato-value">Negocio</span>
+                </div>
+            </div>
+            <h4 style="margin-top: 15px;">Pasos para realizar el pago:</h4>
+            <ol class="pasos-lista">
+                <li>Inicia sesión en tu cuenta de PayPal</li>
+                <li>Selecciona la opción "Enviar dinero"</li>
+                <li>Ingresa nuestro email de PayPal (pagos@importacionesE&Y.com)</li>
+                <li>Indica el monto en USD</li>
+                <li>Selecciona "Pago a familiares y amigos" para evitar comisiones adicionales</li>
+                <li>Agrega una nota con tu nombre y el producto</li>
+                <li>Completa la transacción</li>
+                <li>Envía el comprobante por email</li>
+            </ol>
+        </div>
+    </div>
+    
+    <div style="background-color: aliceblue; border-radius: 10px; padding: 20px; margin-top: 30px;">
+        <h3 style="color: #003332; text-align: center;">Importante</h3>
+        <p style="text-align: center; margin-top: 10px; color: #000000;">
+            Después de realizar cualquier pago, es <strong>imprescindible</strong> que envíes el comprobante a través de WhatsApp o email para que podamos verificar y procesar tu pedido.
+        </p>
+        <p style="text-align: center; margin-top: 10px;">
+            Tiempo de verificación: 1-4 horas hábiles.
+        </p>
+    </div>
+</div>
+
+<footer>
+    <div class="contact">
+        <h3>Contáctanos</h3>
+        <p id="parrafo-footer"><strong>Teléfono:</strong> +58 412-5238518</p>
+        <p id="parrafo-footer"><strong>Correo Electrónico:</strong>
+             <a class="enlace-footer" href="mailto:yojerrp17@gmail.com">yojerrp17@gmail.com</a></p>
+    </div>
+
+    <div class="social-media">
+        <h3>Síguenos en Redes Sociales</h3>
+        <ul>
+            <li id="parrafo-footer"><a class="enlace-footer" href="https://www.facebook.com/yojer.rincones/">Facebook</a></li>
+            <li id="parrafo-footer"><a class="enlace-footer" href="https://www.instagram.com/yojer_rincones57/">Instagram</a></li>
+            <li id="parrafo-footer"><a class="enlace-footer" href="#">Tik tok</a></li>
+        </ul>
+    </div>
+
+    <div class="useful-info">
+        <h3>Información Útil</h3>
+        <ul>
+            <li id="parrafo-footer"><a class="enlace-footer" href="#">Términos y Condiciones</a></li>
+            <li id="parrafo-footer"><a class="enlace-footer" href="#">Política de Privacidad</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-bottom">
+        <p id="parrafo-footer">© 2025 <strong>Importaciones E&Y</strong>. Todos los derechos reservados.</p>
+    </div>
+
+    <img class="logo-footer" src="logo.png" alt="">
+</footer>
+
+</body>
+</html>
